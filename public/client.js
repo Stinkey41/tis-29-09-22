@@ -1,10 +1,15 @@
+let obj = {
+	a: 1,
+	b: 2,
+	c: 3
+}
+let formData = new FormData();
 
-let div = document.querySelector('div');
-let button = document.querySelector('button');
+for(let [item, value] of Object.entries(obj)){
+    formData.set(item, value);
+}
 
-button.addEventListener('click', async function(){
-    const responce = await fetch('/handler/?num=2');
-    const text = await responce.text();
-    div.innerHTML = text;
-
-})
+let promise = fetch('/handler/', {
+	method: 'POST',
+	body: formData,
+});
