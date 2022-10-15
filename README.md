@@ -1,3 +1,3 @@
 # tis-15-10-22
 ULULU
-ya ne tbIril etot kod, chestno :0
+ya ne tiril etot kod, chestno :0
